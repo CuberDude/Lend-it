@@ -1,17 +1,17 @@
+var userId;
 firebase.auth().onAuthStateChanged(function(user) {
   if (!user) {
     // No user is signed in.
     window.location.replace("index.html");
   }
     else{
-        const userId=user.uid;
-        console.log(userId);
+        userId=user.uid;
         const dbRef = firebase.database().ref().child('lent');
         dbRef.on('value', function(snap) { 
             var userInfo=snap.val()[userId]
-            
+
         });
-    }    
+    }     
 });
 var html="";
 
@@ -20,8 +20,15 @@ for(var i = 0 ;i < 10 ; i++){
 }
 
 $("#items").append(html);  
-
+console.log(userId);
 $("#logOut").click(function(){
-    console.log("done");
     firebase.auth().signOut();
+})
+$().ready(function(){
+    var userId = firebase.auth();
+    console.log(userId);
+})
+$("#addBtn").click(function(){
+    console.log("items Added");
+    if(userId){}
 })
