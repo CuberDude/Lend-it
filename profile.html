@@ -7,7 +7,7 @@
     <title>Lend It</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/profile-styles.css">
     <link rel="stylesheet" href="assets/css/Pretty-Header.css">
     <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
 </head>
@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav links">
                     <li role="presentation"><a href="lend.html">Inventory </a></li>
                     <li role="presentation"><a href="#">Lent Items</a></li>
-                    <li role="presentation"><a href="#">Profile </a></li>
+                    <li role="presentation"><a href="profile.html">Profile </a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown ">
@@ -36,5 +36,19 @@
             </div>
         </div>
     </nav>
+    <div>
+        <div id="profileImg" class="container text-center"></div>
+        <div id="name" class="container-fluid text-center">
+            Your Display Name: 
+        </div>
+        <div id="email" class="container-fluid text-center bold">
+            Your Email: 
+        </div>
+    </div>
 </body>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script src="assets/js/profile.js"></script>
 </html>

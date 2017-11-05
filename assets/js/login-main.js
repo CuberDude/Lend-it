@@ -14,6 +14,7 @@ $("#signIn").click(function sign(){
     }
 });*/
     
+    var userInfo;
     console.log("clck");
     var provider =  new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -23,7 +24,7 @@ $("#signIn").click(function sign(){
         // The signed-in user info.
         var user = result.user;  
         // ...
-        console.log(user);
+        userInfo = user;
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -36,4 +37,11 @@ $("#signIn").click(function sign(){
         
         console.log("error"+errorMessage);
     });
+});
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    window.location.replace("profile.html");
+  }
 });
