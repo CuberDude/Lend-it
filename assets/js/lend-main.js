@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     else{
         const userId=user.uid;
         console.log(userId);
-        const dbRef = firebase.database().ref().child('user-profiles');
+        const dbRef = firebase.database().ref().child('lent');
         dbRef.on('value', function(snap) { 
             var userInfo=snap.val()[userId]
             
