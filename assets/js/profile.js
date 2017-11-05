@@ -16,3 +16,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
     };
 });
+
+$("#logOut").click(function(){
+    console.log("done");
+    firebase.auth().signOut();
+})

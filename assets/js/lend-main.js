@@ -20,6 +20,8 @@ for(var i = 0 ;i < 10 ; i++){
 }
 
 $("#items").append(html);  
-if(window.location.pathname === "/profile.html" ){
-    
-}
+
+$("#logOut").click(function(){
+    console.log("done");
+    firebase.auth().signOut();
+})
