@@ -10,8 +10,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         dbRef.on('value', function(snap) { 
             var userInfo=snap.val()[userId]
             
-        }));
-    }
+        });
+    }    
 });
 var html="";
 
