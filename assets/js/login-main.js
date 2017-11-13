@@ -1,5 +1,4 @@
-
-$("#signIn").click(function sign(){
+$("#signIn").click(function sign() {
     /*
     var email = $("#inputEmail").val();
     var password = $("#inputPassword").val();
@@ -13,16 +12,16 @@ $("#signIn").click(function sign(){
         $(location).attr('href',"profile.html");
     }
 });*/
-    
+
     var userInfo;
     console.log("clck");
-    var provider =  new firebase.auth.GoogleAuthProvider();
+    var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // The signed-in user info.
-        var user = result.user;  
+        var user = result.user;
         // ...
         userInfo = user;
     }).catch(function(error) {
@@ -34,14 +33,14 @@ $("#signIn").click(function sign(){
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-        
-        console.log("error"+errorMessage);
+
+        console.log("error" + errorMessage);
     });
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    window.location.replace("profile.html");
-  }
+    if (user) {
+        // User is signed in.
+        window.location.replace("profile.html");
+    }
 });

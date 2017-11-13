@@ -36,10 +36,10 @@
             </div>
         </div>
     </nav>  
-    <a href="#" id ="add-item" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
-    <div id = "items hidden"></div>
+    <a href="#" id ="addBtn" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+    <div id = "items" class=""></div>
     </div>
-    <div id="add">
+    <div id="add" class="hidden">
     
     <div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
@@ -50,7 +50,7 @@
                         <label class="control-label left" >Item Name </label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
+                        <input id="itemName" class="form-control" type="text">
                     </div>
                 </div>
                 <div class="form-group">
@@ -58,11 +58,11 @@
                         <label class="control-label left">Quantity</label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="number" min="0.0" step="any" >
+                        <input id="itemQty" class="form-control" type="number" min="0.0" step="any" >
                     </div> 
                 </div>
                 <div class="form-group" style="text-align:center">
-                    <button id="addBtn" class="btn btn-default submit-button" type="button">Add Item(s)</button>
+                    <button id="addItem" class="btn btn-default submit-button" type="button">Add Item(s)</button>
                 </div>
             </form>
         </div>
