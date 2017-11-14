@@ -1,10 +1,14 @@
-.itemImg{
-    float:left;
+.itemImg {
+    float: left;
     padding: 5px;
+    height: 128px;
+    width: 128px;
 }
-.itemInfo{
+
+.itemInfo {
     padding-top: 5px;
 }
-.left{
+
+.left {
     margin-left: 5px;
 }

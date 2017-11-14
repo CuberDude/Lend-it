@@ -23,9 +23,9 @@
                     <li role="presentation"><a href="inventory.html">Inventory </a></li>
                     <li role="presentation"><a href="lent.html">Lent Items</a></li>
                     <li role="presentation"><a href="profile.html">Profile </a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown ">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown ">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"> <span class="caret"></span><img src="assets/img/avatar.jpg" class="dropdown-image"></a>
                         <ul class="dropdown-menu dropdown-menu-right" role="menu">
                             <li role="presentation"><a href="#">Settings </a></li>
@@ -35,43 +35,43 @@
                 </ul>
             </div>
         </div>
-    </nav>  
-    <a href="#" id ="addBtn" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
-    <div id = "items" class=""></div>
+    </nav>
+    <a href="#" id="addBtn" class="btn btn-default pull-right"><span id="plusMinus" class="glyphicon glyphicon-plus"></span></a>
+    <div id="items" class=""></div>
     </div>
     <div id="add" class="hidden">
-    
-    <div class="row register-form">
-        <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal custom-form">
-                <h1 class="left">Add Item</h1>
-                <div class="form-group">
-                    <div class="col-sm-4 label-column">
-                        <label class="control-label left" >Item Name </label>
+
+        <div class="row register-form">
+            <div class="col-md-8 col-md-offset-2">
+                <form class="form-horizontal custom-form">
+                    <h1 class="left">Add Item</h1>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            <label class="control-label left">Item Name </label>
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            <input id="itemName" class="form-control" type="text">
+                        </div>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input id="itemName" class="form-control" type="text">
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            <label class="control-label left">Quantity</label>
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            <input id="itemQty" class="form-control" type="number" min="0.0" step="any">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-4 label-column">
-                        <label class="control-label left">Quantity</label>
+                    <div class="form-group" style="text-align:center">
+                        <button id="addItem" class="btn btn-default submit-button" type="button">Add Item(s)</button>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input id="itemQty" class="form-control" type="number" min="0.0" step="any" >
-                    </div> 
-                </div>
-                <div class="form-group" style="text-align:center">
-                    <button id="addItem" class="btn btn-default submit-button" type="button">Add Item(s)</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script src="assets/js/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/inventory-main.js"></script>
 </body>
 
